@@ -3,76 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FIB | National Criminal Enforcement Division (NCED)</title>
+  <title>FIB | National Criminal Enforcement Division</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html, body {
+    body {
       font-family: 'Orbitron', sans-serif;
-      background-color: #000;
-      color: #fff;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
     }
 
     header {
-      position: relative;
       width: 100%;
       height: 60vh;
       background: url('fbiagent1.jpg') center center/cover no-repeat;
+      position: relative;
     }
 
-    .overlay {
+    .header-dark-overlay {
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
       width: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      background: rgba(10, 10, 10, 0.5);
     }
 
-    .header-text {
+    .header-title {
       position: absolute;
-      bottom: 20px;
+      bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
-      color: #00eaff;
+      color: #f2f2f2;
       font-size: 2.8rem;
       text-shadow: 0 0 10px #000;
       z-index: 2;
     }
 
-    .banner-strip {
-      background-color: #00eaff;
-      color: #000;
-      text-align: center;
-      padding: 12px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    .content {
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
       padding: 40px 20px;
+      background-color: #111;
+    }
+
+    .gallery img {
+      max-width: 300px;
+      border-radius: 8px;
+      border: 2px solid #555;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+
+    .section {
       max-width: 900px;
-      margin: auto;
+      margin: 40px auto;
+      padding: 0 20px;
       text-align: center;
     }
 
-    .content h2 {
-      color: #00eaff;
+    .section h2 {
+      font-size: 1.8rem;
+      color: #f5f5f5;
       margin-bottom: 20px;
+      border-bottom: 2px solid #444;
+      padding-bottom: 10px;
     }
 
-    .content p {
-      color: #ccc;
-      line-height: 1.7;
+    .section p {
       font-size: 1.05rem;
+      line-height: 1.7;
+      color: #bbb;
     }
 
     footer {
-      margin-top: 60px;
       text-align: center;
-      color: #777;
+      margin-top: 60px;
+      padding: 20px;
+      color: #555;
       font-size: 0.85rem;
+      border-top: 1px solid #222;
     }
 
     .join-button {
@@ -80,51 +92,50 @@
       bottom: 20px;
       right: 20px;
       padding: 14px 26px;
-      background-color: #00eaff;
-      color: black;
+      background-color: #f5f5f5;
+      color: #111;
       font-weight: bold;
       text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
       transition: 0.3s;
-      z-index: 10;
     }
 
     .join-button:hover {
-      background-color: #00c6d6;
+      background-color: #dcdcdc;
     }
 
     @media (max-width: 600px) {
-      .header-text {
-        font-size: 1.8rem;
-      }
+      .header-title { font-size: 1.6rem; }
+      .gallery img { max-width: 90%; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="overlay"></div>
-    <div class="header-text">FIB | NCED Operasyon Birimi</div>
+    <div class="header-dark-overlay"></div>
+    <div class="header-title">FIB | NCED Operasyon Birimi</div>
   </header>
 
-  <div class="banner-strip">Federal Criminal Intelligence — National Division</div>
-
-  <div class="content">
-    <h2>Federal Investigation Bureau Hakkında</h2>
-    <p>
-      National Criminal Enforcement Division (NCED), FIB çatısı altında çalışan gizli operasyonlar birimidir.
-      Los Santos ve çevresindeki organize suç örgütlerine karşı istihbarat toplar, takip yapar ve gerektiğinde doğrudan müdahalede bulunur.
-      Ekibimiz özel eğitimli ajanlardan oluşur ve her biri şehir güvenliğini sağlamak için görevdedir.
-      <br><br>
-      FIB birimi olarak disiplinli, ciddi ve roleplay’e saygılı bir ekip arıyorsan — doğru yerdesin.
-      Sunucuda aktif görev alan ajanlarımızla birlikte şehri koruma vakti geldi.
-    </p>
-
-    <footer>
-      © 2025 FIB - National Criminal Enforcement Division
-    </footer>
+  <div class="gallery">
+    <img src="fbiagent.jpg" alt="FIB Ajanı">
+    <img src="fbiagent2.jpg" alt="Operasyon Ekibi">
+    <img src="fibagent1.jpg" alt="Taktik Hazırlık">
   </div>
+
+  <div class="section">
+    <h2>Federal Investigation Bureau (FIB) Hakkında</h2>
+    <p>
+      National Criminal Enforcement Division (NCED), FIB çatısı altında çalışan özel bir istihbarat ve müdahale birimidir. Suç örgütlerine karşı gizli operasyonlar, takibat, dijital analiz ve fiziksel görevlerde aktif rol alır. Ekibimiz, yüksek disiplinli ve eğitimli ajanlardan oluşur.
+      <br><br>
+      Roleplay ortamında ciddi, kaliteli ve kurallara saygılı bir deneyim sunmayı hedefleyen bu ekip; adaleti ve düzeni sağlamak için görevdedir.
+    </p>
+  </div>
+
+  <footer>
+    © 2025 FIB - National Criminal Enforcement Division
+  </footer>
 
   <a href="https://discord.gg/4AAA57FnGK" target="_blank" class="join-button">Ekibe Katıl</a>
 

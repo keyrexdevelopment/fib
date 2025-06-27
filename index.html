@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FIB | Ekibimize Katıl</title>
+  <title>FIB | Federal Bureau of Criminal Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
   <style>
     * {
       margin: 0;
@@ -11,51 +12,96 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
-      font-family: Arial, sans-serif;
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      overflow-x: hidden;
     }
 
     .background {
-      background: url('fibb1.jpg') no-repeat center center fixed;
+      background: url('fibb1.jpg') center center no-repeat;
       background-size: cover;
-      filter: blur(5px);
-      position: absolute;
+      filter: blur(6px);
+      position: fixed;
       width: 100%;
       height: 100%;
       z-index: -1;
     }
 
     .content {
-      height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
-      color: white;
-      backdrop-filter: brightness(0.9);
-      padding: 20px;
+      color: #fff;
+      padding: 60px 20px 100px;
     }
 
     h1 {
       font-size: 2.8rem;
       margin-bottom: 20px;
+      color: #00eaff;
       text-shadow: 0 0 10px #000;
     }
 
-    a {
-      text-decoration: none;
-      padding: 15px 30px;
-      background-color: rgba(0, 238, 255, 0.8);
-      color: black;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: 0.3s;
+    .agent-card {
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 2px solid #00eaff;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0, 238, 255, 0.2);
+      max-width: 400px;
+      padding: 20px;
+      backdrop-filter: blur(2px);
     }
 
-    a:hover {
-      background-color: rgba(0, 200, 220, 0.9);
+    .agent-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+
+    .agent-card h3 {
+      color: #00eaff;
+      margin-bottom: 10px;
+    }
+
+    .agent-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #777;
+      font-size: 0.85rem;
+    }
+
+    .join-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 14px 26px;
+      background-color: rgba(0, 238, 255, 0.85);
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+      transition: 0.3s;
+      z-index: 10;
+    }
+
+    .join-button:hover {
+      background-color: rgba(0, 200, 220, 0.95);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .agent-card { width: 90%; }
     }
   </style>
 </head>
@@ -64,9 +110,20 @@
   <div class="background"></div>
 
   <div class="content">
-    <h1>FIB Ekibine Katılmaya Hazır mısın?</h1>
-    <a href="https://discord.gg/4AAA57FnGK" target="_blank">🎫 Ekibe Katıl</a>
+    <h1>FIB Ekibine Katıl</h1>
+
+    <div class="agent-card">
+      <img src="fibagent1.jpg" alt="FIB Ajanı">
+      <h3>Gizli Operasyon</h3>
+      <p>FIB ajanları, Los Santos’un en tehlikeli bölgelerinde görev yapar. Sen de bu profesyonel ekibin bir parçası olabilirsin.</p>
+    </div>
+
+    <footer>
+      © 2025 FIB - Federal Bureau of Criminal Intelligence
+    </footer>
   </div>
+
+  <a href="https://discord.gg/4AAA57FnGK" target="_blank" class="join-button">Ekibe Katıl</a>
 
 </body>
 </html>

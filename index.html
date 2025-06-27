@@ -1,134 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FIB | Federal Bureau of Criminal Intelligence</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet"/>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(circle, #0a0a0a, #000000);
-      color: #f5f5f5;
-      overflow-x: hidden;
-    }
-
-    header {
-      background: rgba(0, 0, 0, 0.85);
-      padding: 30px;
-      text-align: center;
-      border-bottom: 2px solid #00bcd4;
-      animation: fadeIn 1.5s ease;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #00bcd4;
-      letter-spacing: 2px;
-    }
+    body { margin:0; font-family:'Orbitron', sans-serif; background:#080808; color:#ddd; }
+    header { padding:20px; text-align:center; background:#111; }
+    header img { height:80px; animation:logoFade 1.5s ease-out; }
+    header h1 { margin:10px 0; font-size:2rem; color:#00d8ff; }
+    @keyframes logoFade { from {opacity:0; transform:scale(0.8);} to {opacity:1; transform:scale(1);} }
 
     .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: url('https://i.imgur.com/o1z5UqV.png') no-repeat center center/cover;
       position: relative;
+      background: url('https://i.imgur.com/o1z5UqV.png') center/cover no-repeat;
+      height:60vh;
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
     }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.7);
+    .hero::after {
+      content:"";
+      position:absolute; top:0; left:0; width:100%; height:100%;
+      background:rgba(0,0,0,0.7);
     }
-
     .hero-content {
-      position: relative;
-      z-index: 1;
+      position:relative; text-align:center;
     }
-
-    .hero h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      color: #00e5ff;
-      animation: slideIn 2s ease;
+    .hero-content h2 {
+      font-size:2.2rem; color:#00eaff;
+      animation:slideDown 1.8s ease;
     }
-
-    .hero a {
-      padding: 15px 25px;
-      background: #00e5ff;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: 0.3s ease;
+    @keyframes slideDown { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
+    .hero-content a {
+      display:inline-block; margin-top:20px;
+      padding:12px 24px; background:#00eaff; color:#000;
+      font-weight:600; text-decoration:none; border-radius:6px;
+      transition:background 0.3s;
     }
+    .hero-content a:hover { background:#00b2cc; }
 
-    .hero a:hover {
-      background: #00bcd4;
-    }
-
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-      border-top: 1px solid #333;
-    }
-
-    .section h3 {
-      font-size: 1.8rem;
-      color: #00e5ff;
-      margin-bottom: 20px;
-    }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
+    .section { padding:60px 20px; max-width:1000px; margin:auto; }
+    .section h3 { font-size:1.8rem; color:#00eaff; margin-bottom:24px; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
     .card {
-      background: #111;
-      border: 1px solid #00bcd4;
-      padding: 20px;
-      border-radius: 10px;
-      width: 300px;
-      transition: transform 0.3s;
+      background:#1a1a1a; border:1px solid #00b2cc;
+      border-radius:8px; padding:20px; transition:transform 0.3s,box-shadow 0.3s;
     }
-
     .card:hover {
-      transform: scale(1.05);
+      transform:translateY(-5px);
+      box-shadow:0 4px 15px rgba(0,255,255,0.3);
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      background: #000;
-      border-top: 1px solid #222;
-      color: #888;
-      font-size: 0.9rem;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    @keyframes slideIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    @media (max-width: 600px) {
-      .cards {
-        flex-direction: column;
-        align-items: center;
-      }
+      background:#111; padding:20px; text-align:center;
+      font-size:0.9rem; color:#777;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="https://i.imgur.com/o1z5UqV.png" alt="FIB Logo"/>
     <h1>👮‍♂️ FIB | Federal Bureau of Criminal Intelligence</h1>
   </header>
 
@@ -140,19 +72,19 @@
   </section>
 
   <section class="section">
-    <h3>🕵️ Görevlerimiz</h3>
+    <h3>🕵️ Misyonlarımız</h3>
     <div class="cards">
       <div class="card">
         <h4>İstihbarat</h4>
-        <p>Suç organizasyonlarını önceden tespit et ve analiz et.</p>
+        <p>Suç organizasyonlarını analiz ederek önleyici stratejiler geliştiririz.</p>
       </div>
       <div class="card">
         <h4>Operasyon</h4>
-        <p>Yüksek riskli operasyonlara liderlik et ve delil topla.</p>
+        <p>Yüksek riskli görevleri planlar, brifingler düzenler ve deliller toplarız.</p>
       </div>
       <div class="card">
         <h4>Koruma</h4>
-        <p>Tanıkları ve gizli bilgileri koruma altına al.</p>
+        <p>Tanık güvenliği ve kritik bilgi akışını yönetiriz.</p>
       </div>
     </div>
   </section>

@@ -1,101 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FIB | Federal Bureau of Criminal Intelligence</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet"/>
+  <title>FIB | Ekibimize Katıl</title>
   <style>
-    body { margin:0; font-family:'Orbitron', sans-serif; background:#080808; color:#ddd; }
-    header { padding:20px; text-align:center; background:#111; }
-    header img { height:80px; animation:logoFade 1.5s ease-out; }
-    header h1 { margin:10px 0; font-size:2rem; color:#00d8ff; }
-    @keyframes logoFade { from {opacity:0; transform:scale(0.8);} to {opacity:1; transform:scale(1);} }
-
-    .hero {
-      position: relative;
-      background: url('https://i.imgur.com/o1z5UqV.png') center/cover no-repeat;
-      height:60vh;
-      display:flex; align-items:center; justify-content:center;
-      overflow:hidden;
-    }
-    .hero::after {
-      content:"";
-      position:absolute; top:0; left:0; width:100%; height:100%;
-      background:rgba(0,0,0,0.7);
-    }
-    .hero-content {
-      position:relative; text-align:center;
-    }
-    .hero-content h2 {
-      font-size:2.2rem; color:#00eaff;
-      animation:slideDown 1.8s ease;
-    }
-    @keyframes slideDown { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
-    .hero-content a {
-      display:inline-block; margin-top:20px;
-      padding:12px 24px; background:#00eaff; color:#000;
-      font-weight:600; text-decoration:none; border-radius:6px;
-      transition:background 0.3s;
-    }
-    .hero-content a:hover { background:#00b2cc; }
-
-    .section { padding:60px 20px; max-width:1000px; margin:auto; }
-    .section h3 { font-size:1.8rem; color:#00eaff; margin-bottom:24px; }
-    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
-    .card {
-      background:#1a1a1a; border:1px solid #00b2cc;
-      border-radius:8px; padding:20px; transition:transform 0.3s,box-shadow 0.3s;
-    }
-    .card:hover {
-      transform:translateY(-5px);
-      box-shadow:0 4px 15px rgba(0,255,255,0.3);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    footer {
-      background:#111; padding:20px; text-align:center;
-      font-size:0.9rem; color:#777;
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .background {
+      background: url('fibb1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      filter: blur(5px);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      backdrop-filter: brightness(0.9);
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #000;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 15px 30px;
+      background-color: rgba(0, 238, 255, 0.8);
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background-color: rgba(0, 200, 220, 0.9);
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://i.imgur.com/o1z5UqV.png" alt="FIB Logo"/>
-    <h1>FIB | Federal Bureau of Criminal Intelligence</h1>
-  </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Adaletin Sessiz Gölgeleri</h2>
-      <a href="https://discord.gg/4AAA57FnGK" target="_blank">🎫 Ekibe Katıl</a>
-    </div>
-  </section>
+  <div class="background"></div>
 
-  <section class="section">
-    <h3>Misyonlarımız</h3>
-    <div class="cards">
-      <div class="card">
-        <h4>İstihbarat</h4>
-        <p>Suç organizasyonlarını analiz ederek önleyici stratejiler geliştiririz.</p>
-      </div>
-      <div class="card">
-        <h4>Operasyon</h4>
-        <p>Yüksek riskli görevleri planlar, brifingler düzenler ve deliller toplarız.</p>
-      </div>
-      <div class="card">
-        <h4>Koruma</h4>
-        <p>Tanık güvenliği ve kritik bilgi akışını yönetiriz.</p>
-      </div>
-    </div>
-  </section>
+  <div class="content">
+    <h1>FIB Ekibine Katılmaya Hazır mısın?</h1>
+    <a href="https://discord.gg/4AAA57FnGK" target="_blank">🎫 Ekibe Katıl</a>
+  </div>
 
-  <section class="section">
-    <h3>📍 Lokasyon</h3>
-    <p>FIB HQ, Los Santos, San Andreas</p>
-  </section>
-
-  <footer>
-    © 2025 FIB - Federal Bureau of Criminal Intelligence | Tüm hakları saklıdır.
-  </footer>
 </body>
 </html>
